@@ -58,6 +58,7 @@ hr {
     margin-bottom:2px;
     padding:auto;
     width:70%;
+    text-decoration:none;
 }
 
 #initialsarea {
@@ -97,12 +98,4 @@ hr {
     align-items:start;
     max-width:100px;
     margin: 0 auto;
-}
-
-.ch {
-    display:none;
-}
-
-.w-container {
-    padding:0px;
 }
