@@ -102,3 +102,7 @@ hr {
 .ch {
     display:none;
 }
+
+.w-container {
+    padding:0px;
+}
