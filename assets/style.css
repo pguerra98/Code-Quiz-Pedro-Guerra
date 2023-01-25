@@ -1,0 +1,104 @@
+:root {
+    background-color:black;
+}
+
+* {
+    box-sizing:border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin:0;
+    padding:0;
+    color:lightgray;
+}
+
+/* Global callouts below */
+
+body {
+    margin:auto;
+    padding:auto;
+    text-align:center;
+}
+
+footer {
+    font-size:15px;
+    padding:5px;
+}
+
+label { 
+    font-size:15px;
+    margin:0px;
+    padding:5px;
+}
+
+h1 {
+    font-weight: 600;
+    margin:5px;
+}
+
+h2 {
+    color:lightgray;
+    font-weight: 700;
+    margin:5px;
+}
+
+h3 {
+    font-weight:600;
+}
+
+hr {
+    margin:5px;
+}
+
+
+/* Id callouts below */
+ 
+#card-1 {
+    background-color:navy;
+    margin:auto;
+    margin-top:2px;
+    margin-bottom:2px;
+    padding:auto;
+    width:70%;
+}
+
+#initialsarea {
+    background-color:navy;
+    border-color:black;
+    font-size:20px;
+    text-align:center;
+    width:50px;
+}
+
+/* Buttons callouts below */
+
+.btn {
+    background:navy;
+    border-color:black;
+    color: lightgray;
+    font-size:20px;
+    font-weight:800;
+    margin:5px;
+    padding:5px;
+    text-decoration:none;
+    text-shadow: 0 1 black;
+}
+
+.btn:hover {
+    cursor:pointer;
+    box-shadow:0 0 5px black inset;
+}
+
+/* Classes callouts below */
+
+.container {
+    width:100px;
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:start;
+    max-width:100px;
+    margin: 0 auto;
+}
+
+.ch {
+    display:none;
+}
