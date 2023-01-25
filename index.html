@@ -11,7 +11,109 @@
 
     <body>
 
+        <h1>Coding Quiz Challenge</h1>
+
+        <section class="start">
+            <p>Welcome to this coding quiz! There is a time limit present, so try to answer all questions before the timer runs out! Also,
+                any incorrect answer will deduct the timer by 10 seconds!
+            </p>
+            <button id="startbttn" type="button" class="btn">Start Quiz</button>
+            
+            <br>
+
+        </section>
+
+        <main class="main">
+
+            <div id="card" class="container ch">
+
+                <h2 class="timer">Timer: </h2>
+
+                <div id="card-1" class="card-area">
+
+                    <header class="question-header">
+                        <h3 id="questions">Question Location</h3>
+                    </header>
+                
+                    <div id ="mc" class="mc-area">
+
+                        <div class="questions-l">
+                            <label id="choiceA"></label>
+                        </div>
+
+                        <div class="questions-l">
+                            <label id="choiceB"></label>
+                        </div>
+
+                        <div class="questions-l">
+                            <label id="choiceC"></label>
+                        </div>
+                        
+                        <div class="questions-l">
+                            <label id="choiceD"></label>
+                        </div>
+
+                    </div>
+
+                    <footer id="bottom-message" class="footer-area">Take your time, don't rush!</footer>
+
+                </div>
+
+            </div>
+
+            <button id="leadbtn" type="button" class="btn">High Scores</button>
+            
+            <br>
+
+            <div id="insertF" class="container ch">
+
+                <h1>Game Over!</h1>
+
+                <h2>Total Score: <span id="totalscorebtn" class="btn">Score</span> points!</h2>
+
+                <section>
+
+                    <label for="initialsarea">Enter Initials Here:</label>
+
+                    <br>
+
+                    <input id="initialsarea" type="text" maxlength="2">
+                    
+                    <br>
+
+                    <input id="submitbttn" type="submit" class="btn">
+
+                </section>
+            </div>
+
+            <div id="totalscorecard" class="container ch">
+
+                <div id="card-1" class="rcarea">
+
+                    <header class="card-area">
+
+                        <h1>10 Highest Scores</h1>
+
+                    </header>
+                    <hr style="margin-top:0; border-color:beige;">
+                    <div id="Leaderboard" class="mc-area" style="min-height: 300px"></div>
+                    <hr style="margin-top: 0; border-color:beige;">
+                    <footer id="bottom-message2" class="footer-area">Thankyou for playing this coding quiz!</footer>
+                </div>
+
+                <button id="returnbutton" type="button" class="btn">Return to Main Menu</button>
+
+                <button id="clearscoresbutton" type="button" class="btn">Clear Scores</button>
+
+            </div>
+
+        </main>
+
+        <script src="./assets/quiz-questions.js"></script>
         <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        
+
     </body>
 
 </html>
