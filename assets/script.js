@@ -67,11 +67,11 @@ function highscoresboard() {
     for (var i=0; i < tenhighestscores.length; i++) {
         var user = tenhighestscores[i].user;
         var score = tenhighestscores[i].score;
-        var newsection = document.createElement("section");
-        highscoresboardsection.appendChild(newsection);
+        var newDiv = document.createElement("div");
+        highscoresboardDiv.appendChild(newDiv);
         var newlabel = document.createElement("label");
         newlabel.textContent = user + " - " + score;
-        newsection.appendChild(newlabel);
+        newDiv.appendChild(newlabel);
     }
 }
 
@@ -88,21 +88,21 @@ function deletefromleaderboard() {
 /* The function below will add user's initials to the 10 highest scores if their score is higher than one already on the leaderboard */
 
 function buildonleaderboard() {
-    highscoresboardsection = document.createElement("section");
-    highscoresboardsection.setAttribute("id", "userinitials");
-    document.getElementById("highscoresboard").appendChild("highscoresboardsection")
+    highscoresboardDiv = document.createElement("div");
+    highscoresboardDiv.setAttribute("id", "userinitials");
+    document.getElementById("highscoresboard").appendChild("highscoresboardDiv");
 }
 
 /* The function below will save the score of the user even after closing out of the page*/
 
 function savescore() {
-    localStorage.setItem("highscores", JSON.stringify(scorelist))
+    localStorage.setItem("highScores", JSON.stringify(scorelist))
 }
 
 /* The function below will pull high scores from the saved storage*/
 
 function getscore() {
-    var putawayscore = JSON.parse(localStorage.getItem("highscore"));
+    var putawayscore = JSON.parse(localStorage.getItem("highScore"));
     if (putawayscore !== null) {
         scorelist = putawayscore;
     }
@@ -181,8 +181,8 @@ submitbttn.addEventListener("click", function(event) {
     event.preventDefault();
     var userinitials = initialsarea.value.trim();
     var newscore = {
-        user:userinitials,
-        score:score,
+        user: userinitials,
+        score: score,
     };
     scorelist.push(newscore);
     savescore();
