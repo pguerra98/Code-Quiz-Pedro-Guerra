@@ -16,7 +16,7 @@ var returnbutton = document.querySelector("#returnbutton");
 var leadbtn = document.querySelector("#leadbtn");
 var sCard = document.querySelector("#totalscorecard");
 var sBtn = document.querySelector("#totalscorebtn");
-var initialsarea = document.querySelector("#initialsarea");
+var initialsa = document.querySelector("#initials");
 var submitbttn = document.querySelector("#submitbttn");
 var remainingtime = questions.length * 18;
 var y = 0;
@@ -26,6 +26,7 @@ var scorelist = [];
 var timeinterval;
 
 getscore();
+
 
 /* The function below will be the running timer for the quiz */
 
@@ -102,9 +103,8 @@ function savescore() {
 /* The function below will pull high scores from the saved storage*/
 
 function getscore() {
-    var putawayscore = JSON.parse(localStorage.getItem("highScore"));
-    if (putawayscore !== null) {
-        scorelist = putawayscore;
+    if (localStorage.getItem("score")) {
+        score = parseInt(localStorage.getItem("score"));
     }
 }
 
@@ -141,6 +141,14 @@ function determineanswer(event) {
     getquestions();
     }
 }
+
+function submitInitials() {
+    let initials = document.getElementById("initials").value;
+    let initialsList = document.getElementById("initials-list");
+    initialsList.innerHTML += initials + " - " + score + "<br>";
+    document.getElementById("initials").value = "";
+  }
+
 /* Below will be the event listeners*/
 
 startquiz.addEventListener("click", function (event) {
@@ -179,14 +187,11 @@ returnbutton.addEventListener("click", function(event) {
 
 submitbttn.addEventListener("click", function(event) {
     event.preventDefault();
-    var userinitials = initialsarea.value.trim();
-    var newscore = {
-        user: userinitials,
-        score: score,
-    };
+    submitInitials();
     scorelist.push(newscore);
     savescore();
     highscoresboard();
     insertF.classList.add("hide");
     sCard.classList.remove("hide");
+    localStorage.setItem("score",score);
 });
