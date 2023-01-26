@@ -12,7 +12,7 @@ N/A
 
 This challenged allowed me to improve my JavaScript, HTML, and CSS coding skills. This was a challenging assignment since we had to start from nothing and utilize a lot of different commands to create a timed quiz.
 
-Deployed Website Link: <a href="https://pguerra98.github.io/password-generator-pedro-guerra/">Coding Quiz</a>
+Deployed Website Link: <a href="https://pguerra98.github.io/Code-Quiz-Pedro-Guerra/">Coding Quiz</a>
 
 ![alt text](assets/Screenshotq.png)
 
